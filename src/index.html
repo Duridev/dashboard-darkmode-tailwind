@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | [Challenge Name Here]</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -14,12 +18,33 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body class="font-inter bg-white before:absolute before:inset-x-0 before:0 before:h-96 before:bg-very-pale-blue before:-z-10 text-very-dark-blue">
 
-  Social Media Dashboard
-  Total Followers: 23,004
+  <main class="w-[90%] max-w-screen-xl mx-auto overflow-hidden py-16">
 
-  Dark Mode
+    <h1 class="text-3xl">Social Media Dashboard</h1>
+    <p class="text-dark-grayish-blue font-bold mt-3 pb-6 border-b-2">Total Followers: 23,004</p>
+
+    <div class="flex items-center justify-between pt-6">
+
+      <p class="text-dark-grayish-blue font-bold">Dark Mode</p>
+
+      <input type="checkbox" id="switch" class="peer hidden" data-id="switch-theme">
+
+      <label for="switch" class="w-16 h-8 flex items-center flex-row-reverse p-2 rounded-full cursor-pointer bg-[hsl(230,22%,74%)]
+      
+      peer-checked:bg-gradient-to-r from-gradient-switch-first to-gradient-switch-second
+      
+      peer-checked:[--bg-circle:hsl(228,28%,20%)]
+      peer-checked:[--transform-circle:-100%]">
+        <div class="bg-[var(--bg-circle,_white)] aspect-square rounded-full w-1/2 translate-x-[var(--transform-circle)] transition-transform"></div>
+      </label>
+
+    </div>
+
+  </main>
+
+  
 
   
 
