@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -17,6 +17,15 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+  <script>
+    const storageThemeValue = localStorage.getItem('theme');
+    const systemColorScheme = window.matchMedia(('(prefers-color-scheme: dark)')).matches ? 'dark' : 'light';
+
+    const newThemePage = storageThemeValue ?? systemColorScheme;
+
+    document.documentElement.setAttribute('data-theme', newThemePage);
+  </script>
 </head>
 <body class="font-inter bg-white before:absolute before:inset-x-0 before:0 before:h-96 before:bg-very-pale-blue before:-z-10 text-very-dark-blue-top
 
@@ -230,5 +239,7 @@ dark:text-white
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="www.duridev.cl">Duridev</a>.
   </div>
+
+  <script src="./app.js"></script>
 </body>
 </html>

@@ -762,13 +762,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2.5rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
+.text-lg {
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -798,11 +798,6 @@ h1, h2, h3, h4, h5, h6 {
 .text-very-dark-blue {
   --tw-text-opacity: 1;
   color: hsl(230 17% 14% / var(--tw-text-opacity));
-}
-
-.text-lime-50 {
-  --tw-text-opacity: 1;
-  color: rgb(247 254 231 / var(--tw-text-opacity));
 }
 
 .transition-transform {
@@ -901,39 +896,33 @@ h1, h2, h3, h4, h5, h6 {
   --transform-circle: -100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-dark-desaturated-blue {
-    --tw-bg-opacity: 1;
-    background-color: hsl(228 28% 20% / var(--tw-bg-opacity));
-  }
+:is([data-theme="dark"] .dark\:bg-dark-desaturated-blue) {
+  --tw-bg-opacity: 1;
+  background-color: hsl(228 28% 20% / var(--tw-bg-opacity));
+}
 
-  .dark\:bg-very-dark-blue {
-    --tw-bg-opacity: 1;
-    background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
-  }
+:is([data-theme="dark"] .dark\:bg-very-dark-blue) {
+  --tw-bg-opacity: 1;
+  background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
+}
 
-  .dark\:text-desaturated-blue {
-    --tw-text-opacity: 1;
-    color: hsl(228 34% 66% / var(--tw-text-opacity));
-  }
+:is([data-theme="dark"] .dark\:text-desaturated-blue) {
+  --tw-text-opacity: 1;
+  color: hsl(228 34% 66% / var(--tw-text-opacity));
+}
 
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
+:is([data-theme="dark"] .dark\:text-white) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
-  .dark\:before\:bg-very-dark-blue::before {
-    content: var(--tw-content);
-    --tw-bg-opacity: 1;
-    background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
-  }
+:is([data-theme="dark"] .dark\:before\:bg-very-dark-blue)::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
-  .md\:grid {
-    display: grid;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
